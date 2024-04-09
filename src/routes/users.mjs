@@ -21,7 +21,7 @@ router.get(
     withMessage('Must be at least 3-10 characters'),
   (req, res) => {
     const result = validationResult(req);
-    console.log(result);
+    // console.log(result);
     const {
       query: { filter, value },
     } = req;
@@ -50,7 +50,7 @@ router.post(
   checkSchema(createUserValidationSchema),
   (req, res) => {
     const result = validationResult(req);
-    console.log(result);
+    // console.log(result);
 
     if (!result.isEmpty()) {
       return res.status(404).send({ errors: result.array() });
