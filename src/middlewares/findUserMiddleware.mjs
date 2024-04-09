@@ -1,4 +1,4 @@
-import { mockUsers } from '../data.js';
+import { mockUsers } from '../utils/data.js';
 
 export const resolveIndexByUserId = (req, res, next) => {
   const {
