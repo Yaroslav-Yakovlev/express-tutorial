@@ -26,7 +26,7 @@ router.get(
         console.log(err);
         throw err;
       }
-      console.log(sessionData);
+      // console.log('sessionData',sessionData);
     });
     const result = validationResult(req);
     // console.log(result);
