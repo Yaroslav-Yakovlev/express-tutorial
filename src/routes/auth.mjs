@@ -19,7 +19,7 @@ router.post('/api/auth', (req, res) => {
 
 router.get('/api/auth/status', (req, res) => {
   req.sessionStore.get(req.sessionID, (err, session) => {
-    console.log('session', session);
+    // console.log('session', session);
   });
 
   return req.session.user
