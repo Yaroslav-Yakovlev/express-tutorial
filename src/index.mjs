@@ -3,12 +3,17 @@ import routes from './routes/index.mjs';
 import cookieParser from 'cookie-parser';
 import session from 'express-session';
 import passport from 'passport';
-import './starategies/local-strategy.mjs';
+import mongoose from 'mongoose';
 import localStrategy from './starategies/local-strategy.mjs';
 
 const app = express();
 
+mongoose.connect('mongodb://0.0.0.0:27017/express-tutorial')
+  .then(() => console.log('Connect to Database'))
+  .catch((err) => console.log(`Error: ${err}`))
+
 app.use(express.json());
+
 app.use(cookieParser('helloworld'));
 
 app.use(session({
